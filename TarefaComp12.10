@@ -11,28 +11,32 @@ namespace TarefaComp1210
     {
         static void Main(string[] args)
         {
+            //Pedindo a quantidade de pessoas
             Console.WriteLine("Número de pessoas: ");
             int n = int.Parse(Console.ReadLine());
 
             double[] vect = new double[n];
 
 
-            
+            //Usando o FOR, vai repetir a pergunta de acordo com o número de pessoas
             for (int i = 0; i < n; i++)
             {
                 Console.WriteLine("Altura da pessoa: " + i);
                 vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             }
+            //declarando
             double sum = 0.0;
 
-
+            //Usando o FOR pra verificar todas as informações descritas anteriormente
             for (int i = 0; i < n; i++)
             {
                 sum += vect[i];
             }
 
+            //Calculando a média
             double m = sum/n;
 
+            //mostrando o resultado
             Console.WriteLine("A média de altura das pessoas inseridas é = " + m);
             Console.ReadKey();
 
