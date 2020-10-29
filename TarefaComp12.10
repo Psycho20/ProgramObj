@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+
+namespace TarefaComp1210
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Número de pessoas: ");
+            int n = int.Parse(Console.ReadLine());
+
+            double[] vect = new double[n];
+
+
+            
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Altura da pessoa: " + i);
+                vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+            double sum = 0.0;
+
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += vect[i];
+            }
+
+            double m = sum/n;
+
+            Console.WriteLine("A média de altura das pessoas inseridas é = " + m);
+            Console.ReadKey();
+
+        }
+    }
+}
