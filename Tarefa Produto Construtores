@@ -1,0 +1,114 @@
+//CÓDIGO PRINCIPAL
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+
+namespace Tarefa_Construtores
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Pedindo os dados do produto
+            Console.Write("Informe o nome do produto: ");
+            string nome = Console.ReadLine();
+
+
+            Console.Write("Informe o preço do produto: ");
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+            Console.Write("Informe a quantidade do produto: ");
+            int quantidade = int.Parse(Console.ReadLine());
+
+
+            //Usando a classe produto, os dados são armazenados no "p"
+            Produto p = new Produto(nome, preco, quantidade);
+
+
+            //Mostrando as informações do produto
+            Console.WriteLine("\nDados do produto \n" + p + "\n\n");
+
+
+            //Pedingo a quantidade de produtos a ser adicionado ao estoque
+            Console.Write("Digite a quantidade a ser adicionada ao estoque: ");
+            p.AdicionarProdutos(int.Parse(Console.ReadLine()));
+
+
+            //mostra as informações do produto com última atualização
+            Console.WriteLine($"\nDados do produto \n" + p + "\n\n");
+
+
+            //Pedindo a quantidade de produtos a ser removidos do estoque
+            Console.Write("Digite a quantidade a ser removido do estoque: ");
+            p.RemoverProdutos(int.Parse(Console.ReadLine()));
+
+
+            //Mostrando as informações do produto com última atualização
+            Console.WriteLine($"\nDados atualizados \n" + p + "\n\n");
+            Console.ReadKey();
+
+
+        }
+    }
+}
+
+// CÓDIGO CLASS
+
+using System.Globalization;
+
+namespace Tarefa_Construtores
+{
+    internal class Produto
+    {
+        public string Nome;
+
+        public double Preco;
+
+        public int Quantidade;
+
+        public Produto(string nome, double preco, int quantidade)
+
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+        }
+
+
+        //Calculando o valor total do estoque
+        public double ValorTotalEstoque()
+        {
+            double total = Quantidade * Preco;
+            return total;
+        }
+
+
+        //Modificar a quantidade de produtos
+        public void AdicionarProdutos(int qnt)
+        {
+            Quantidade += qnt;
+        }
+
+
+        public void RemoverProdutos(int qnt)
+        {
+            Quantidade -= qnt;
+        }
+
+
+        //To String pra retornar as informações do produto
+        public override string ToString()
+        {
+            return "Nome: " + Nome + "\n"
+                + "Preço: R$ " + Preco.ToString("F2", CultureInfo.InvariantCulture) + "\n"
+                + Quantidade + " Em estoque\n"
+                + "Valor total: R$ " + ValorTotalEstoque().ToString("F2", CultureInfo.InvariantCulture);
+        }
+    }
+}
