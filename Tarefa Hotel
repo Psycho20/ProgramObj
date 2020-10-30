@@ -1,0 +1,63 @@
+//CÓDIGO PRINCIPAL
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tarefa_Hotel
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Inserindo a quantidade de quartos
+            Console.Write("Quantos quartos estão alugados? ");
+            int n = int.Parse(Console.ReadLine());
+            Quarto[] vect = new Quarto[10];
+
+            //Usando o FOR como repetição, pedindo algumas informações do hóspede de acordo com a quantidade de quartos
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("\nHóspede #" + (i + 1) + ";");
+                Console.Write("Nome: ");
+                string nome = Console.ReadLine();
+                Console.Write("Email: ");
+                string email = Console.ReadLine();
+                Console.Write("Quarto: ");
+                int q = int.Parse(Console.ReadLine());
+                vect[q] = new Quarto { Nome = nome, Email = email };
+            }
+            //limpar a tela
+            Console.Clear();
+
+
+            //mostrando os quartos ocupados
+            Console.WriteLine("========================");
+            Console.WriteLine("Os quartos ocupados são");
+            for (int i = 0; i < vect.Length; i++)
+            {
+                if (vect[i] != null)
+                {
+                    Console.WriteLine((i)+ ") " + vect[i].Nome + " , Email:  " + vect[i].Email);
+                    
+                }
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
+
+// CÓDIGO CLASSE
+
+namespace Tarefa_Hotel
+{
+    internal class Quarto
+    {
+        public string Nome { get; set; }
+        public string Email { get; set; }
+    }
+}
