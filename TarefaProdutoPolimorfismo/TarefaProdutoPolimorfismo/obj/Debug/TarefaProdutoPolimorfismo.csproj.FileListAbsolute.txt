@@ -1,0 +1,7 @@
+C:\Users\Lucas\source\repos\TarefaProdutoPolimorfismo\TarefaProdutoPolimorfismo\bin\Debug\TarefaProdutoPolimorfismo.exe.config
+C:\Users\Lucas\source\repos\TarefaProdutoPolimorfismo\TarefaProdutoPolimorfismo\bin\Debug\TarefaProdutoPolimorfismo.exe
+C:\Users\Lucas\source\repos\TarefaProdutoPolimorfismo\TarefaProdutoPolimorfismo\bin\Debug\TarefaProdutoPolimorfismo.pdb
+C:\Users\Lucas\source\repos\TarefaProdutoPolimorfismo\TarefaProdutoPolimorfismo\obj\Debug\TarefaProdutoPolimorfismo.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\TarefaProdutoPolimorfismo\TarefaProdutoPolimorfismo\obj\Debug\TarefaProdutoPolimorfismo.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\source\repos\TarefaProdutoPolimorfismo\TarefaProdutoPolimorfismo\obj\Debug\TarefaProdutoPolimorfismo.exe
+C:\Users\Lucas\source\repos\TarefaProdutoPolimorfismo\TarefaProdutoPolimorfismo\obj\Debug\TarefaProdutoPolimorfismo.pdb
